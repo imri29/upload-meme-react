@@ -1,17 +1,39 @@
 import React, { Component } from 'react';
 import './form.css';
 import FileInput from '../FileInput/FileInput';
-// import axios from 'axios/index';
+import axios from 'axios/index';
 
 export default class Form extends Component {
   state = {
     name: '',
     email: '',
-    description: ''
+    description: '',
+    file: null
   };
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
+  };
+
+  onFileUpload = file => {
+    this.setState({ file });
+  };
+
+  submitFormHandler = () => {
+    const API_URL = 'http://www.memeking.co.il/api/upload-suggested-new-meme';
+    const formData = {
+      name: this.state.name,
+      email: this.state.email,
+      description: this.state.description,
+      urlPath: this.state.file
+    };
+    console.log(formData);
+    axios
+      .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, {
+        // headers: { 'Access-Control-Allow-Origin': '*' },
+        formData
+      })
+      .then(response => console.log(response));
   };
 
   render() {
@@ -38,8 +60,25 @@ export default class Form extends Component {
           onChange={this.onChange}
           value={this.state.description}
         />
-        <FileInput />
+        <FileInput onFileUpload={this.onFileUpload} />
+        <button onClick={this.submitFormHandler}>
+          <span>שליחה</span>
+        </button>
       </form>
     );
   }
 }
+
+//FileInput - after the file has been uploaded (via onFileSelect on the input element itself), add it to the form's state via onFileUploaded.
+
+
+axios.post('/user', {
+  firstName: 'Fred',
+  lastName: 'Flintstone'
+})
+   .then(function (response) {
+     console.log(response);
+   })
+   .catch(function (error) {
+     console.log(error);
+   });
