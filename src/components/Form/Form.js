@@ -21,19 +21,16 @@ export default class Form extends Component {
 
   submitFormHandler = () => {
     const API_URL = 'http://www.memeking.co.il/api/upload-suggested-new-meme';
-    const formData =  {
+    const formData = {
       name: this.state.name,
       email: this.state.email,
       description: this.state.description,
       urlPath: this.state.file
     };
-
-    console.log(formData);
-    axios({
-      method: 'post',
-      url: `https://cors-anywhere.herokuapp.com/${API_URL}`,
-      data: formData
-    });
+    axios
+      .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
+      .then(response => console.log(response))
+      .catch(error => console.error(error));
   };
 
   render() {
@@ -71,10 +68,10 @@ export default class Form extends Component {
 
 //FileInput - after the file has been uploaded (via onFileSelect on the input element itself), add it to the form's state via onFileUploaded.
 
-/*
-axios
-   .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, {
-     // headers: { 'Access-Control-Allow-Origin': '*' },
-     formData
-   })
-   .then(response => console.log(response));*/
+/*   axios({
+      method: 'post',
+      url: `https://cors-anywhere.herokuapp.com/${API_URL}`,
+      data: formData
+    });
+  };
+*/
