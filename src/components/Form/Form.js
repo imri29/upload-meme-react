@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './form.css';
 import FileInput from '../FileInput/FileInput';
 import axios from 'axios/index';
+import Button from 'react-bootstrap/lib/Button';
+import Basic from '../FileInput/DropzoneAttempt'
 
 export default class Form extends Component {
   state = {
@@ -57,10 +59,11 @@ export default class Form extends Component {
           onChange={this.onChange}
           value={this.state.description}
         />
-        <FileInput onFileUpload={this.onFileUpload} />
-        <button onClick={this.submitFormHandler}>
+        {/*<FileInput onFileUpload={this.onFileUpload} />*/}
+        <Basic onFileUpload={this.onFileUpload}/>
+        <Button bsStyle="primary" onClick={this.submitFormHandler}>
           <span>שליחה</span>
-        </button>
+        </Button>
       </form>
     );
   }
@@ -68,10 +71,3 @@ export default class Form extends Component {
 
 //FileInput - after the file has been uploaded (via onFileSelect on the input element itself), add it to the form's state via onFileUploaded.
 
-/*   axios({
-      method: 'post',
-      url: `https://cors-anywhere.herokuapp.com/${API_URL}`,
-      data: formData
-    });
-  };
-*/

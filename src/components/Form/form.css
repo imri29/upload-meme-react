@@ -17,6 +17,13 @@ input {
     border: 2px solid gold;
     box-shadow: 0 0 10px #719ece; }
 
+input[type="file"] {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  width: 65%; }
+
 ::-webkit-input-placeholder {
   font-family: 'Open Sans Hebrew', sans-serif; }
 

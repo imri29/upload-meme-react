@@ -1,20 +1,22 @@
-div {
-  text-align: center; }
-  div button {
-    margin: auto;
-    display: block;
-    width: 26%;
-    height: 100px;
-    color: #719ece;
-    padding: 8px;
-    background-color: #ffffff;
-    font-family: "Open Sans Hebrew", sans-serif;
-    font-size: 32px;
-    -webkit-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75);
-    box-shadow: 7px 7px 148px -14px rgba(0, 0, 0, 0.75); }
-    @media (max-width: 767px) {
-      div button {
-        font-size: 24px;
-        width: 60%;
-        margin-top: 40px; } }
+.file-upload {
+  display: flex;
+  padding: 10px 16px;
+  align-items: center;
+  text-align: right;
+  height: 70px;
+  margin: 25px auto;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  width: 380px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.33;
+  cursor: pointer; }
+  .file-upload p {
+    margin-bottom: 0; }
+  .file-upload i {
+    margin-right: auto;
+    font-size: 20px; }
+  .file-upload:hover {
+    background-color: #00a1fa; }

@@ -23,6 +23,14 @@ input {
   }
 }
 
+input[type="file"] {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  width: 65%;
+}
+
 ::-webkit-input-placeholder {
   font-family: 'Open Sans Hebrew', sans-serif;
 }
@@ -35,3 +43,4 @@ input {
 ::-moz-placeholder {
   font-family: 'Open Sans Hebrew', sans-serif;
 }
+

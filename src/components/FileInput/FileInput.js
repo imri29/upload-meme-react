@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+// import Dropzone from 'react-dropzone';
 import './file-input.css';
 
-export default class FileInput extends Component {
-  onFileSelect = e => {
-    const blobAsString = this.blobToString(e.target.files[0]);
-    blobAsString.then(file => this.props.onFileUpload(file));
+const FileInput = props => {
+
+  const onFileSelect = e => {
+    const blobAsString = blobToString(e.target.files[0]);
+    blobAsString.then(file => props.onFileUpload(file));
     console.log(blobAsString);
   };
 
-  blobToString = blob => {
+  const blobToString = blob => {
     return new Promise(resolve => {
       const reader = new FileReader();
       reader.onload = event => {
@@ -18,11 +20,11 @@ export default class FileInput extends Component {
     });
   };
 
-  render() {
-    return (
-      <div>
-        <input type="file" name="upload-file" onChange={this.onFileSelect} />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="input-container">
+      <input id="file-input" type="file" name="upload-file" onChange={onFileSelect} />
+    </div>
+  );
+};
+
+export default FileInput;
