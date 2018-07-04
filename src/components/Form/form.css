@@ -1,11 +1,16 @@
 @import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
 form {
-  margin-top: 12px;
-  margin-bottom: 25px; }
+  margin: 12px auto 25px auto;
+  width: 40%;
+  text-align: center; }
+  @media (max-width: 767px) {
+    form {
+      width: 90%; } }
 
 input {
+  display: block;
   height: 56px;
-  width: 65%;
+  width: 100%;
   margin-top: 20px;
   font-size: 24px;
   font-family: 'Open Sans Hebrew', sans-serif;
@@ -16,13 +21,6 @@ input {
     outline: none !important;
     border: 2px solid gold;
     box-shadow: 0 0 10px #719ece; }
-
-input[type="file"] {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 20px;
-  width: 65%; }
 
 ::-webkit-input-placeholder {
   font-family: 'Open Sans Hebrew', sans-serif; }

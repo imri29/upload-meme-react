@@ -3,7 +3,7 @@ import './form.css';
 // import FileInput from '../FileInput/FileInput';
 import axios from 'axios/index';
 import Button from '../Button/Button';
-import Basic from '../FileInput/DropzoneAttempt';
+import FileInput from '../FileInput/FileInput';
 
 
 export default class Form extends Component {
@@ -30,6 +30,7 @@ export default class Form extends Component {
       description: this.state.description,
       urlPath: this.state.file
     };
+    console.log(formData);
     axios
       .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
       .then(response => console.log(response))
@@ -60,9 +61,8 @@ export default class Form extends Component {
           onChange={this.onChange}
           value={this.state.description}
         />
-        {/*<FileInput onFileUpload={this.onFileUpload} />*/}
-        <Basic onFileUpload={this.onFileUpload}/>
-        <Button theme="deep-blue" bsStyle="primary" bsSize="lg" block onClick={this.submitFormHandler}>
+        <FileInput onFileUpload={this.onFileUpload}/>
+        <Button theme="white" bsStyle="primary" bsSize="lg" block onClick={this.submitFormHandler}>
           <span>שליחה</span>
         </Button>
       </form>

@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fdf63b1-3735-43b9-87da-c0578a23fa7f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Button/button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FileInput/FileInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileInput/FileInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FileInput/file-input.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileInput/file-input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FileInput/file-input.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileInput/file-input.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Form/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,20 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FileInput.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/FileInput/FileInput.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Form.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+            <state relative-caret-position="349">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#114#146#0" expanded="true" />
@@ -45,59 +41,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="form.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Form/form.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Button.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Button/Button.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="25" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="button.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Button/button.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="form.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Form/form.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="46" selection-start-line="46" selection-end-line="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file-input.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/FileInput/file-input.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file-input.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/FileInput/file-input.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DropzoneAttempt.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="260">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -105,9 +62,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Form/form.css">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="file-input.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/FileInput/file-input.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="395">
+              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -146,22 +107,23 @@
         <option value="$PROJECT_DIR$/src/components/App/_app.css" />
         <option value="$PROJECT_DIR$/src/components/App/_app.scss" />
         <option value="$PROJECT_DIR$/src/components/App/app.scss" />
-        <option value="$PROJECT_DIR$/src/components/Header/header.scss" />
-        <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/src/components/Button/FileInput.js" />
         <option value="$PROJECT_DIR$/src/components/App/App.js" />
         <option value="$PROJECT_DIR$/.prettierrc" />
         <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/components/FileInput/file-input.css" />
-        <option value="$PROJECT_DIR$/src/components/Form/form.scss" />
-        <option value="$PROJECT_DIR$/src/components/FileInput/FileInput.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/FileInput/file-input.scss" />
-        <option value="$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js" />
-        <option value="$PROJECT_DIR$/src/components/Form/Form.js" />
-        <option value="$PROJECT_DIR$/src/components/Button/Button.js" />
-        <option value="$PROJECT_DIR$/src/components/Button/button.scss" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.js" />
+        <option value="$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js" />
+        <option value="$PROJECT_DIR$/src/components/Button/button.css" />
+        <option value="$PROJECT_DIR$/src/components/FileInput/file-input.scss" />
+        <option value="$PROJECT_DIR$/src/components/Button/button.scss" />
+        <option value="$PROJECT_DIR$/src/components/Header/header.scss" />
+        <option value="$PROJECT_DIR$/src/index.scss" />
+        <option value="$PROJECT_DIR$/src/components/FileInput/FileInput.js" />
+        <option value="$PROJECT_DIR$/src/components/Button/Button.js" />
+        <option value="$PROJECT_DIR$/src/components/Form/Form.js" />
+        <option value="$PROJECT_DIR$/src/components/Form/form.scss" />
       </list>
     </option>
   </component>
@@ -181,8 +143,8 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="793" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -228,23 +190,7 @@
               <item name="upload-meme-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Button" type="462c0819:PsiDirectoryNode" />
-              <item name="button.scss" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="upload-meme-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upload-meme-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="FileInput" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="upload-meme-react" type="b2602c69:ProjectViewProjectNode" />
-              <item name="upload-meme-react" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="FileInput" type="462c0819:PsiDirectoryNode" />
-              <item name="file-input.scss" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="upload-meme-react" type="b2602c69:ProjectViewProjectNode" />
@@ -258,8 +204,7 @@
               <item name="upload-meme-react" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Form" type="462c0819:PsiDirectoryNode" />
-              <item name="form.scss" type="620a8d5e:NestingTreeNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="upload-meme-react" type="b2602c69:ProjectViewProjectNode" />
@@ -329,7 +274,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84187000" />
+    <option name="totallyTimeSpent" value="87220000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -341,10 +286,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="793" y="0" width="814" height="867" extended-state="1" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="814" height="867" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26546392" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26546392" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32921812" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50128865" side_tool="true" weight="0.2674897" />
@@ -352,7 +296,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49871135" visible="true" weight="0.22770919" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49871135" visible="true" weight="0.33744857" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -387,13 +331,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/App/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -585,20 +522,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/header.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -659,6 +582,16 @@
     <entry file="file://$PROJECT_DIR$/src/components/Form/form.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/FileInput/file-input.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -666,28 +599,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/FileInput/FileInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#114#146#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/FileInput/DropzoneAttempt.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Button/button.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="23" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Button/button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/header.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FileInput/FileInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -696,39 +639,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Button/Button.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="260">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/FileInput/file-input.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Form/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#114#146#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Form/form.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/FileInput/file-input.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Button/button.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="780">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
         </state>
       </provider>
     </entry>
