@@ -1,38 +1,33 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
+import './file-input.css';
 
 export default class Basic extends React.Component {
   state = { files: [] };
 
-  onDrop = (files) => {
-    this.setState({
-      files
-    });
+
+   onFileSelect = files => {
+    const blobAsString = this.blobToString(files[0]);
+    console.log(blobAsString);
+    blobAsString.then(file => this.props.onFileUpload(file));
+    console.log(blobAsString);
   };
 
-  //  onFileSelect = e => {
-  //   const blobAsString = blobToString(e.target.files[0]);
-  //   blobAsString.then(file => props.onFileUpload(file));
-  //   console.log(blobAsString);
-  // };
-  //
-  //  blobToString = blob => {
-  //   return new Promise(resolve => {
-  //     const reader = new FileReader();
-  //     reader.onload = event => {
-  //       resolve(event.target.result);
-  //     };
-  //     reader.readAsDataURL(blob);
-  //   });
-  // };
-
-
+   blobToString = blob => {
+    return new Promise(resolve => {
+      const reader = new FileReader();
+      reader.onload = event => {
+        resolve(event.target.result);
+      };
+      reader.readAsDataURL(blob);
+    });
+  };
 
   render() {
     return (
       <section>
         <div>
-          <Dropzone className="file-upload" onDrop={this.onDrop}>
+          <Dropzone className="file-upload" onDrop={this.onFileSelect}>
             <p>
             העלאת תמונה
             </p>

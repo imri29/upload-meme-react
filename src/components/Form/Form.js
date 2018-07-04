@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './form.css';
-import FileInput from '../FileInput/FileInput';
+// import FileInput from '../FileInput/FileInput';
 import axios from 'axios/index';
-import Button from 'react-bootstrap/lib/Button';
-import Basic from '../FileInput/DropzoneAttempt'
+import Button from '../Button/Button';
+import Basic from '../FileInput/DropzoneAttempt';
+
 
 export default class Form extends Component {
   state = {
@@ -61,7 +62,7 @@ export default class Form extends Component {
         />
         {/*<FileInput onFileUpload={this.onFileUpload} />*/}
         <Basic onFileUpload={this.onFileUpload}/>
-        <Button bsStyle="primary" onClick={this.submitFormHandler}>
+        <Button theme="deep-blue" bsStyle="primary" bsSize="lg" block onClick={this.submitFormHandler}>
           <span>שליחה</span>
         </Button>
       </form>
