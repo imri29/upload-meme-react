@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import './form.css';
-// import FileInput from '../FileInput/FileInput';
 import axios from 'axios/index';
+import './form.css';
+
+//Components
 import Button from '../Button/Button';
 import FileInput from '../FileInput/FileInput';
-
+import Spinner from '../Spinner/Spinner';
+import Modal from '../Modal/Modal'
 
 export default class Form extends Component {
   state = {
     name: '',
     email: '',
     description: '',
-    file: null
+    file: null,
+    isLoading: false
   };
 
   onChange = e => {
@@ -31,10 +34,15 @@ export default class Form extends Component {
       urlPath: this.state.file
     };
     console.log(formData);
-    axios
-      .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
-      .then(response => console.log(response))
-      .catch(error => console.error(error));
+    this.setState({ isLoading: true }, () => {
+      axios
+        .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
+        .then(response => {
+          this.setState({ isLoading: false });
+          console.log(response);
+        })
+        .catch(error => console.error(error));
+    });
   };
 
   render() {
@@ -61,14 +69,21 @@ export default class Form extends Component {
           onChange={this.onChange}
           value={this.state.description}
         />
-        <FileInput onFileUpload={this.onFileUpload}/>
-        <Button theme="white" bsStyle="primary" bsSize="lg" block onClick={this.submitFormHandler}>
+        <FileInput onFileUpload={this.onFileUpload} />
+        <Button
+          theme="white"
+          bsStyle="primary"
+          bsSize="lg"
+          block
+          onClick={this.submitFormHandler}
+        >
           <span>שליחה</span>
+          {this.state.isLoading ? <Spinner /> : null}
         </Button>
+
       </form>
     );
   }
 }
 
 //FileInput - after the file has been uploaded (via onFileSelect on the input element itself), add it to the form's state via onFileUploaded.
-
