@@ -1,0 +1,33 @@
+.modal {
+  padding: 20px;
+  //width: 80%;
+  text-align: center;
+  .fa-times {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 6px;
+    &:hover {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  img {
+    width: 75px;
+    height: 75px;
+    margin: 10px auto;
+  }
+}
+
+.success {
+  color: #4bb543;
+  font-size: 30px;
+}
+
+.failure {
+  color: #cc0000;
+  font-size: 30px;
+}

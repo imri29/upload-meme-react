@@ -6,7 +6,7 @@ import './form.css';
 import Button from '../Button/Button';
 import FileInput from '../FileInput/FileInput';
 import Spinner from '../Spinner/Spinner';
-import Modal from '../Modal/Modal'
+import BootstrapModal from '../Modal/BootstrapModal';
 
 export default class Form extends Component {
   state = {
@@ -14,8 +14,12 @@ export default class Form extends Component {
     email: '',
     description: '',
     file: null,
-    isLoading: false
+    isLoading: false,
+    show: false,
+    // memeSent: true
   };
+
+  //consider adding error in state for the difference modal texts.
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -38,11 +42,15 @@ export default class Form extends Component {
       axios
         .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
         .then(response => {
-          this.setState({ isLoading: false });
+          this.setState({ isLoading: false, show: true });
           console.log(response);
         })
         .catch(error => console.error(error));
     });
+  };
+
+  handleClose = () => {
+    this.setState({ show: false });
   };
 
   render() {
@@ -80,10 +88,15 @@ export default class Form extends Component {
           <span>שליחה</span>
           {this.state.isLoading ? <Spinner /> : null}
         </Button>
-
+        <BootstrapModal
+          show={this.state.show}
+          onHide={this.handleClose}
+          // message={this.state.memeSent}
+        />
       </form>
     );
   }
 }
 
-//FileInput - after the file has been uploaded (via onFileSelect on the input element itself), add it to the form's state via onFileUploaded.
+// if this.state.memeSent = true, render the .success p. else render the .failure
+//maybe conditionally render P's with class name?
