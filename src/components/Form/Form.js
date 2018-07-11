@@ -16,10 +16,8 @@ export default class Form extends Component {
     file: null,
     isLoading: false,
     show: false,
-    // memeSent: true
+    memeStatus: null
   };
-
-  //consider adding error in state for the difference modal texts.
 
   onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -42,10 +40,19 @@ export default class Form extends Component {
       axios
         .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
         .then(response => {
-          this.setState({ isLoading: false, show: true });
+          this.status = response.status;
+          this.setState({
+            isLoading: false,
+            show: true,
+            memeStatus: this.status
+          });
           console.log(response);
+          console.log(this.state.memeStatus);
         })
-        .catch(error => console.error(error));
+        .catch(error => {
+          this.setState({ memeStatus: error });
+          console.error(error);
+        });
     });
   };
 
@@ -54,6 +61,13 @@ export default class Form extends Component {
   };
 
   render() {
+    let message;
+    if (this.state.memeStatus === 200) {
+      message = <p className="success">המם הועלה בהצלחה!</p>;
+    } else {
+      message = <p className="failure">שגיאה! אנא נסו שנית!</p>;
+    }
+
     return (
       <form onSubmit={e => e.preventDefault()}>
         <input
@@ -91,7 +105,7 @@ export default class Form extends Component {
         <BootstrapModal
           show={this.state.show}
           onHide={this.handleClose}
-          // message={this.state.memeSent}
+          message={message}
         />
       </form>
     );

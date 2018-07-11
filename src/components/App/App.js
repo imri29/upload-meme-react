@@ -5,7 +5,6 @@ import './app.css';
 //components
 import Header from '../Header/Header';
 import Form from '../Form/Form';
-import Modal from "../Modal/BootstrapModal";
 
 class App extends Component {
   render() {
@@ -14,7 +13,6 @@ class App extends Component {
         <img className="logo" src={logo} alt="logo" />
         <Header />
         <Form />
-        <Modal />
       </div>
     );
   }

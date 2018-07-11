@@ -9,13 +9,20 @@ const BootstrapModal = ({ show, onHide, message }) => {
       <Modal bsClass="modal" show={show} onHide={onHide}>
         <i className="fas fa-times" onClick={onHide} />
         <img src={logo} alt="logo" />
-        <Modal.Body>
-          <p className="success">המם הועלה בהצלחה!</p>
-          {/*<p className="failure">שגיאה! אנא נסו שנית!</p>*/}
-        </Modal.Body>
+        <Modal.Body />
+        {message}
       </Modal>
     </div>
   );
 };
 
 export default BootstrapModal;
+
+/*
+message={
+  message ? (
+     <p className="success">המם הועלה בהצלחה!</p>
+  ) : (
+     <p className="failure">שגיאה! אנא נסו שנית!</p>
+  )
+}*/
