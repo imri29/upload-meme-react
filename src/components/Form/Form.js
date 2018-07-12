@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios/index';
+import FormGroup from 'react-bootstrap/lib/FormGroup';
+import FormControl from 'react-bootstrap/lib/FormControl';
+
 import './form.css';
 
 //Components
@@ -69,48 +72,47 @@ export default class Form extends Component {
     }
 
     return (
-      <form onSubmit={e => e.preventDefault()}>
-        <input
-          type="text"
-          name="name"
-          placeholder="שם"
-          onChange={this.onChange}
-          value={this.state.name}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="אימייל"
-          onChange={this.onChange}
-          value={this.state.email}
-        />
-        <input
-          type="text"
-          name="description"
-          placeholder="תיאור המם"
-          onChange={this.onChange}
-          value={this.state.description}
-        />
-        <FileInput onFileUpload={this.onFileUpload} />
-        <Button
-          theme="white"
-          bsStyle="primary"
-          bsSize="lg"
-          block
-          onClick={this.submitFormHandler}
-        >
-          <span>שליחה</span>
-          {this.state.isLoading ? <Spinner /> : null}
-        </Button>
-        <BootstrapModal
-          show={this.state.show}
-          onHide={this.handleClose}
-          message={message}
-        />
-      </form>
+      <FormGroup>
+        <form onSubmit={e => e.preventDefault()}>
+          <FormControl
+            type="text"
+            name="name"
+            placeholder="שם"
+            onChange={this.onChange}
+            value={this.state.name}
+          />
+          <FormControl
+            type="email"
+            name="email"
+            placeholder="אימייל"
+            onChange={this.onChange}
+            value={this.state.email}
+          />
+          <FormControl
+            type="text"
+            name="description"
+            placeholder="תיאור המם"
+            onChange={this.onChange}
+            value={this.state.description}
+          />
+          <FileInput onFileUpload={this.onFileUpload} />
+          <Button
+            theme="white"
+            bsStyle="primary"
+            bsSize="lg"
+            block
+            onClick={this.submitFormHandler}
+          >
+            <span>שליחה</span>
+            {this.state.isLoading ? <Spinner /> : null}
+          </Button>
+          <BootstrapModal
+            show={this.state.show}
+            onHide={this.handleClose}
+            message={message}
+          />
+        </form>
+      </FormGroup>
     );
   }
 }
-
-// if this.state.memeSent = true, render the .success p. else render the .failure
-//maybe conditionally render P's with class name?
