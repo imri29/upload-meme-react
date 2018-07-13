@@ -19,7 +19,8 @@ export default class Form extends Component {
     file: null,
     isLoading: false,
     show: false,
-    memeStatus: null
+    memeStatus: null,
+    serverReply: ''
   };
 
   onChange = e => {
@@ -44,10 +45,12 @@ export default class Form extends Component {
         .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
         .then(response => {
           this.status = response.status;
+          this.serverReply = response.data;
           this.setState({
             isLoading: false,
             show: true,
-            memeStatus: this.status
+            memeStatus: this.status,
+            serverReply: this.serverReply
           });
           console.log(response);
           console.log(this.state.memeStatus);
@@ -59,16 +62,33 @@ export default class Form extends Component {
     });
   };
 
+  getInitialState = () => {
+    this.setState({
+      name: '',
+      email: '',
+      description: '',
+      file: null,
+      isLoading: false,
+      show: false,
+      memeStatus: null
+    });
+  };
+
   handleClose = () => {
     this.setState({ show: false });
+    this.getInitialState();
   };
 
   render() {
     let message;
-    if (this.state.memeStatus === 200) {
-      message = <p className="success">המם הועלה בהצלחה!</p>;
-    } else {
-      message = <p className="failure">שגיאה! אנא נסו שנית!</p>;
+    if (
+      this.state.memeStatus !== 200 ||
+      this.state.serverReply === 'error, urlPath must be a string'
+    ) {
+      message = <p className="failure">שגיאה! אנו נסו שנית</p>;
+    }
+    else {
+      message = <p className="success">המם הועלה בהצלחה!</p>
     }
 
     return (
