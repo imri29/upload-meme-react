@@ -53,7 +53,6 @@ export default class Form extends Component {
             serverReply: this.serverReply
           });
           console.log(response);
-          console.log(this.state.memeStatus);
         })
         .catch(error => {
           this.setState({ memeStatus: error });
@@ -82,13 +81,12 @@ export default class Form extends Component {
   render() {
     let message;
     if (
-      this.state.memeStatus !== 200 ||
+      (this.state.memeStatus !== 200 && this.state.memeStatus !== null) ||
       this.state.serverReply === 'error, urlPath must be a string'
     ) {
-      message = <p className="failure">שגיאה! אנו נסו שנית</p>;
-    }
-    else {
-      message = <p className="success">המם הועלה בהצלחה!</p>
+      message = <p className="failure">שגיאה! אנא נסו שנית</p>;
+    } else {
+      message = <p className="success">המם הועלה בהצלחה!</p>;
     }
 
     return (
