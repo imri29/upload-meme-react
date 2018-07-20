@@ -3,7 +3,6 @@ import Dropzone from 'react-dropzone';
 import './file-input.css';
 
 const FileInput = props => {
-
   const onFileSelect = files => {
     const blobAsString = blobToString(files[0]);
     blobAsString.then(file => props.onFileUpload(file));
@@ -22,12 +21,10 @@ const FileInput = props => {
 
   return (
     <section>
-      <div>
-        <Dropzone className="file-upload" onDrop={onFileSelect}>
-          <p>העלאת תמונה</p>
-          <i className="box-icon size-md theme-default fas fa-upload pull-left" />
-        </Dropzone>
-      </div>
+      <Dropzone className="file-upload" onDrop={onFileSelect}>
+        <p>העלאת תמונה</p>
+        <i className="box-icon size-md theme-default fas fa-upload pull-left" />
+      </Dropzone>
     </section>
   );
 };

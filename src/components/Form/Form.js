@@ -11,6 +11,9 @@ import FileInput from '../FileInput/FileInput';
 import Spinner from '../Spinner/Spinner';
 import BootstrapModal from '../Modal/BootstrapModal';
 
+const API_URL = 'http://www.memeking.co.il/api/upload-suggested-new-meme';
+
+
 export default class Form extends Component {
   state = {
     name: '',
@@ -32,7 +35,6 @@ export default class Form extends Component {
   };
 
   submitFormHandler = () => {
-    const API_URL = 'http://www.memeking.co.il/api/upload-suggested-new-meme';
     const formData = {
       name: this.state.name,
       email: this.state.email,
@@ -44,13 +46,12 @@ export default class Form extends Component {
       axios
         .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)
         .then(response => {
-          this.status = response.status;
-          this.serverReply = response.data;
+
           this.setState({
             isLoading: false,
             show: true,
-            memeStatus: this.status,
-            serverReply: this.serverReply
+            memeStatus: response.status,
+            serverReply: response.data
           });
           console.log(response);
         })
@@ -121,8 +122,7 @@ export default class Form extends Component {
             block
             onClick={this.submitFormHandler}
           >
-            <span>שליחה</span>
-            {this.state.isLoading ? <Spinner /> : null}
+            {this.state.isLoading ? <Spinner /> : <span>שליחה</span>}
           </Button>
           <BootstrapModal
             show={this.state.show}

@@ -9,7 +9,7 @@ import Form from '../Form/Form';
 class App extends Component {
   render() {
     return (
-      <div className="logo-wrapper">
+      <div className="wrapper">
         <img className="logo" src={logo} alt="logo" />
         <Header />
         <Form />
