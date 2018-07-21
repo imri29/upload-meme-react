@@ -2,10 +2,11 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import './file-input.css';
 
-const FileInput = props => {
+const FileInput = ({ onFileUpload }) => {
+
   const onFileSelect = files => {
     const blobAsString = blobToString(files[0]);
-    blobAsString.then(file => props.onFileUpload(file));
+    blobAsString.then(file => onFileUpload(file));
     console.log(blobAsString);
   };
 

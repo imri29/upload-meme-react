@@ -18,12 +18,3 @@ const BootstrapModal = ({ show, onHide, message }) => {
 };
 
 export default BootstrapModal;
-
-/*
-message={
-  message ? (
-     <p className="success">המם הועלה בהצלחה!</p>
-  ) : (
-     <p className="failure">שגיאה! אנא נסו שנית!</p>
-  )
-}*/

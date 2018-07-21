@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import logo from '../../logo.png';
 import './app.css';
 
@@ -6,15 +6,13 @@ import './app.css';
 import Header from '../Header/Header';
 import Form from '../Form/Form';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="wrapper">
-        <img className="logo" src={logo} alt="logo" />
-        <Header />
-        <Form />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="wrapper">
+      <img className="logo" src={logo} alt="logo" />
+      <Header />
+      <Form />
+    </div>
+  );
+};
 export default App;

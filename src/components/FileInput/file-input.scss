@@ -21,6 +21,6 @@
     font-size: 20px;
   }
   &:hover{
-    background-color: #00a1fa;
+    background-color: lighten(#00a1fa, 4%);
   }
 }
