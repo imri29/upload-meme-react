@@ -42,7 +42,7 @@ export default class Form extends Component {
       description: this.state.description,
       urlPath: this.state.file
     };
-    console.log(formData);
+
     this.setState({ isLoading: true }, () => {
       axios
         .post(`https://cors-anywhere.herokuapp.com/${API_URL}`, formData)

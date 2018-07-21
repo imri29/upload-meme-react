@@ -7,7 +7,6 @@ const FileInput = ({ onFileUpload }) => {
   const onFileSelect = files => {
     const blobAsString = blobToString(files[0]);
     blobAsString.then(file => onFileUpload(file));
-    console.log(blobAsString);
   };
 
   const blobToString = blob => {
